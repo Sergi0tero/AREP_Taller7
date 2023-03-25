@@ -2,7 +2,7 @@
 ## Autor:
 ### Sergio Andrés Otero Herrera
 
-# Taller 6 AREP:
+# Taller 7 AREP:
 En este taller se crearon instancias del codigo usando AWS de forma que quedara como muestra el siguiente diagrama:
 ![image](https://user-images.githubusercontent.com/98189066/224490598-ff3774c4-5df4-4af9-87fa-658a4e1071cb.png)
 
@@ -35,20 +35,16 @@ Corremos el codigo:
 ```
 java -cp target/classes RoundRobin
 ```
-**Si se quiere probar de forma local, se debe cambiar las IPs en las clases ```Main``` y ```RoundRobin``` a localhost**
-
-Para probar la instancia de AWS, la cual debe estar corriendo, se hace la consulta al siguiente URL: 
-http://ec2-54-90-253-130.compute-1.amazonaws.com:4567/logs.html
+**Si se quiere probar de forma local, se debe cambiar las IPs en las clases ```URLReader``` y ```Api``` a localhost**
 
 ## Diseño
 El proyecto fue realizado en Java. El ciclo de vida empieza por el usuario, quien utiliza la pagina inicial con la ruta /logs.html. En esta pagina inical el usuaro puede crear y consultar los logs dados, se le presentan solo 10. Esto por detras busca en una base de datos de MondoDB usando Spark.
 
 ## Modular
 Estas son las diferentes capaz que podemos ver:
-- RoundRobin
+- API
+- URLReader
 - AWS
-- MongoDB
-- LogerServices
 
 ## Pruebas y proceso
 

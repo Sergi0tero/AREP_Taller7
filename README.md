@@ -4,7 +4,7 @@
 
 # Taller 7 AREP:
 En este taller se crearon instancias del codigo usando AWS de forma que quedara como muestra el siguiente diagrama:
-![image](https://user-images.githubusercontent.com/98189066/224490598-ff3774c4-5df4-4af9-87fa-658a4e1071cb.png)
+![image](https://user-images.githubusercontent.com/98189066/227730901-ebd61ee2-5dfb-4a14-b953-c4b5f5751502.png)
 
 
 
@@ -33,12 +33,17 @@ mvn clean install
 ```
 Corremos el codigo:
 ```
-java -cp target/classes RoundRobin
+java -cp target/classes Api
+```
+y luego 
+
+```
+java -cp target/classes UrlReader
 ```
 **Si se quiere probar de forma local, se debe cambiar las IPs en las clases ```URLReader``` y ```Api``` a localhost**
 
 ## Diseño
-El proyecto fue realizado en Java. El ciclo de vida empieza por el usuario, quien utiliza la pagina inicial con la ruta /logs.html. En esta pagina inical el usuaro puede crear y consultar los logs dados, se le presentan solo 10. Esto por detras busca en una base de datos de MondoDB usando Spark.
+El proyecto fue realizado en Java. El ciclo de vida empieza por el usuario, quien utiliza la pagina inicial con la ruta /hello, este consulta directamente a la API URLReader. Esto posteriormente consulta a la API externa, la informacion resultante la recibe esta informacion y se le muestra en pantalla.
 
 ## Modular
 Estas son las diferentes capaz que podemos ver:
